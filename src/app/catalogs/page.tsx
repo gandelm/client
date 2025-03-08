@@ -2,12 +2,13 @@ import Table from '@/components/Table'
 import DetailButton from '@/components/DetailButton'
 import APIClient from '@/lib/api'
 import { ListResponse } from '@/generated/catalog/v1/catalog_pb'
+import { timestampDate } from '@bufbuild/protobuf/wkt'
 
 export default async function Page() {
   const response: ListResponse = await new APIClient().Catalog().List()
   return (
     <div className="overflow-x">
-      <Table columns={['Name', 'SERVER', 'MASTER', 'Owner', '']}>
+      <Table columns={['Name', 'SERVER', 'MASTER', 'Created At', 'Updated At', 'Priority', 'Owner', '']}>
         {response.catalogs.map((catalog) => (
           <tr key={catalog.id}>
             <td>
@@ -19,6 +20,15 @@ export default async function Page() {
             </td>
             <td>
               <span className="font-bold">rc/v2.1.0</span>
+            </td>
+            <td>
+              <span>{timestampDate(catalog.createdAt!).toISOString()}</span>
+            </td>
+            <td>
+              <span>{timestampDate(catalog.updatedAt!).toISOString()}</span>
+            </td>
+            <td>
+              <span>{catalog.priority}</span>
             </td>
             <td>
               <span>atsuya.siphon@example.com</span>
