@@ -1,6 +1,7 @@
 import { createConnectTransport } from "@connectrpc/connect-web";
 import { createClient } from "@connectrpc/connect";
-import { CatalogService, CreateRequest } from "@/generated/catalog/v1/catalog_pb";
+import { CatalogService, CreateRequest } from "@/generated/protocol/catalog/v1/catalog_pb";
+import { WorkloadService } from "@/generated/protocol/workload/v1/workload_pb";
 
 export default class APIClient {
   private tp: any
@@ -14,6 +15,26 @@ export default class APIClient {
 
   Catalog(): Catalog {
     return new Catalog(this.tp);
+  }
+
+  Workload(): Workload {
+    return new Workload(this.tp);
+  }
+}
+
+export class Workload {
+  private client
+
+  constructor(tp: any) {
+    this.client = createClient(WorkloadService, tp);
+  }
+
+  async Get(catalog_id: string, workload_id: string) {
+    return this.client.get({ catalogId: catalog_id, workloadId: workload_id });
+  }
+
+  async List(catalog_id: string) {
+    return this.client.list({ catalogId: catalog_id });
   }
 }
 

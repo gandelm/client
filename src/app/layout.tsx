@@ -17,7 +17,7 @@ export default function RootLayout({
     <html>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Siphon</title>
+        <title>Gandelm</title>
       </head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body>
@@ -25,11 +25,10 @@ export default function RootLayout({
         <div data-theme="light" className="flex-col h-screen stripe">
           <div className="flex">
             <div className="flex-1 ">
-              <Header title="Siphon"></Header>
+              <Header title="Gandelm"></Header>
               <div className="flex flex-1">
                 <div className="flex-1 p-6">
                   <div>
-                    <h1 className="text-5xl font-extrabold mb-4">🏗️ Workloads</h1>
                     <BreadCrumb />
                     {children}
                   </div>

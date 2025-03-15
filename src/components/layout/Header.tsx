@@ -15,11 +15,14 @@ const Header = ({ title }: HeaderProps) => {
         </button>
       </div>
       <div className="flex-1">
-        <Link href="/workloads" className="btn btn-ghost text-xl">{title}</Link>
+        <Link href="/catalogs" className="btn btn-ghost text-xl">{title}</Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li><Link href="/workloads">Workloads</Link></li>
+          <li><Link href="/catalogs">Catalogs</Link></li>
+          <li><Link href="/artifacs">Artifacts</Link></li>
+          <li><Link href="/labels">Labels</Link></li>
+          <li><Link href="/versions">Versions</Link></li>
           <li>
             <details>
               <summary>siphonist@example.com</summary>

@@ -8,7 +8,7 @@ interface TableProps {
 export default function Table({ columns, children }: TableProps) {
   return (
     <div className="overflow-x-auto bg-base-100 shadow">
-      <table className="table glass">
+      <table className="table">
         <thead>
           <tr className="text-xs uppercase italic font-stretch-extra-condensed bg-base-200">
             {columns.map((col, index) => (

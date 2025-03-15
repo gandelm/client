@@ -1,13 +1,14 @@
 import Table from '@/components/Table'
 import DetailButton from '@/components/DetailButton'
 import APIClient from '@/lib/api'
-import { ListResponse } from '@/generated/catalog/v1/catalog_pb'
+import { ListResponse } from '@/generated/protocol/catalog/v1/catalog_pb'
 import { timestampDate } from '@bufbuild/protobuf/wkt'
 
 export default async function Page() {
   const response: ListResponse = await new APIClient().Catalog().List()
   return (
     <div className="overflow-x">
+      <h1 className="text-5xl font-extrabold mb-4">🏗️ Catalog</h1>
       <Table columns={['Name', 'SERVER', 'MASTER', 'Created At', 'Updated At', 'Priority', 'Owner', '']}>
         {response.catalogs.map((catalog) => (
           <tr key={catalog.id}>
