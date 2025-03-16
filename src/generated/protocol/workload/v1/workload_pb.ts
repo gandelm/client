@@ -4,7 +4,6 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
-import type { Artifact, ArtifactJson } from "../../catalog/v1/catalog_pb.ts";
 import { file_protocol_catalog_v1_catalog } from "../../catalog/v1/catalog_pb.ts";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -12,7 +11,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file protocol/workload/v1/workload.proto.
  */
 export const file_protocol_workload_v1_workload: GenFile = /*@__PURE__*/
-  fileDesc("CiNwcm90b2NvbC93b3JrbG9hZC92MS93b3JrbG9hZC5wcm90bxITZ2FuZGVsbS53b3JrbG9hZC52MSIhCgtMaXN0UmVxdWVzdBISCgpjYXRhbG9nX2lkGAEgASgJIkAKDExpc3RSZXNwb25zZRIwCgl3b3JrbG9hZHMYASADKAsyHS5nYW5kZWxtLndvcmtsb2FkLnYxLldvcmtsb2FkIjUKCkdldFJlcXVlc3QSEgoKY2F0YWxvZ19pZBgBIAEoCRITCgt3b3JrbG9hZF9pZBgCIAEoCSI+CgtHZXRSZXNwb25zZRIvCgh3b3JrbG9hZBgBIAEoCzIdLmdhbmRlbG0ud29ya2xvYWQudjEuV29ya2xvYWQigAEKCFdvcmtsb2FkEhMKC3dvcmtsb2FkX2lkGAEgASgJEhAKCGVuZHBvaW50GAIgASgJEhIKCmVudHJ5cG9pbnQYAyABKAkSOQoOZXh0ZXJuYWxfbGlua3MYBCADKAsyIS5nYW5kZWxtLndvcmtsb2FkLnYxLkV4dGVybmFsTGluayIqCgxFeHRlcm5hbExpbmsSDQoFdGl0bGUYASABKAkSCwoDdXJsGAIgASgJImIKEkFydGlmYWN0V2l0aE9iamVjdBIuCghhcnRpZmFjdBgBIAEoCzIcLmdhbmRlbG0uY2F0YWxvZy52MS5BcnRpZmFjdBIPCgd2ZXJzaW9uGAIgASgJEgsKA3VybBgDIAEoCTKoAQoPV29ya2xvYWRTZXJ2aWNlEksKBExpc3QSIC5nYW5kZWxtLndvcmtsb2FkLnYxLkxpc3RSZXF1ZXN0GiEuZ2FuZGVsbS53b3JrbG9hZC52MS5MaXN0UmVzcG9uc2USSAoDR2V0Eh8uZ2FuZGVsbS53b3JrbG9hZC52MS5HZXRSZXF1ZXN0GiAuZ2FuZGVsbS53b3JrbG9hZC52MS5HZXRSZXNwb25zZWIGcHJvdG8z", [file_protocol_catalog_v1_catalog]);
+  fileDesc("CiNwcm90b2NvbC93b3JrbG9hZC92MS93b3JrbG9hZC5wcm90bxITZ2FuZGVsbS53b3JrbG9hZC52MSIhCgtMaXN0UmVxdWVzdBISCgpjYXRhbG9nX2lkGAEgASgJInYKDExpc3RSZXNwb25zZRIwCgl3b3JrbG9hZHMYASADKAsyHS5nYW5kZWxtLndvcmtsb2FkLnYxLldvcmtsb2FkEjQKC2RlcGxveW1lbnRzGAIgAygLMh8uZ2FuZGVsbS53b3JrbG9hZC52MS5EZXBsb3ltZW50IjUKCkdldFJlcXVlc3QSEgoKY2F0YWxvZ19pZBgBIAEoCRITCgt3b3JrbG9hZF9pZBgCIAEoCSJ0CgtHZXRSZXNwb25zZRIvCgh3b3JrbG9hZBgBIAEoCzIdLmdhbmRlbG0ud29ya2xvYWQudjEuV29ya2xvYWQSNAoLZGVwbG95bWVudHMYAiADKAsyHy5nYW5kZWxtLndvcmtsb2FkLnYxLkRlcGxveW1lbnQigAEKCFdvcmtsb2FkEhMKC3dvcmtsb2FkX2lkGAEgASgJEhAKCGVuZHBvaW50GAIgASgJEhIKCmVudHJ5cG9pbnQYAyABKAkSOQoOZXh0ZXJuYWxfbGlua3MYBCADKAsyIS5nYW5kZWxtLndvcmtsb2FkLnYxLkV4dGVybmFsTGluayIqCgxFeHRlcm5hbExpbmsSDQoFdGl0bGUYASABKAkSCwoDdXJsGAIgASgJIo0BCgpEZXBsb3ltZW50EjIKCmNvbnRhaW5lcnMYASADKAsyHi5nYW5kZWxtLndvcmtsb2FkLnYxLkNvbnRhaW5lchI6Cg5yZXBsaWNhX3N0YXR1cxgCIAEoCzIiLmdhbmRlbG0ud29ya2xvYWQudjEuUmVwbGljYVN0YXR1cxIPCgdtZXNzYWdlGAMgASgJIjkKCUNvbnRhaW5lchINCgVpbWFnZRgBIAEoCRIMCgRuYW1lGAIgASgJEg8KB2lzX2luaXQYAyABKAgiUwoNUmVwbGljYVN0YXR1cxIPCgdkZXNpcmVkGAEgASgNEhEKCWF2YWlsYWJsZRgCIAEoDRINCgVyZWFkeRgDIAEoDRIPCgd1cGRhdGVkGAQgASgNMqgBCg9Xb3JrbG9hZFNlcnZpY2USSwoETGlzdBIgLmdhbmRlbG0ud29ya2xvYWQudjEuTGlzdFJlcXVlc3QaIS5nYW5kZWxtLndvcmtsb2FkLnYxLkxpc3RSZXNwb25zZRJICgNHZXQSHy5nYW5kZWxtLndvcmtsb2FkLnYxLkdldFJlcXVlc3QaIC5nYW5kZWxtLndvcmtsb2FkLnYxLkdldFJlc3BvbnNlYgZwcm90bzM", [file_protocol_catalog_v1_catalog]);
 
 /**
  * @generated from message gandelm.workload.v1.ListRequest
@@ -49,6 +48,11 @@ export type ListResponse = Message<"gandelm.workload.v1.ListResponse"> & {
    * @generated from field: repeated gandelm.workload.v1.Workload workloads = 1;
    */
   workloads: Workload[];
+
+  /**
+   * @generated from field: repeated gandelm.workload.v1.Deployment deployments = 2;
+   */
+  deployments: Deployment[];
 };
 
 /**
@@ -59,6 +63,11 @@ export type ListResponseJson = {
    * @generated from field: repeated gandelm.workload.v1.Workload workloads = 1;
    */
   workloads?: WorkloadJson[];
+
+  /**
+   * @generated from field: repeated gandelm.workload.v1.Deployment deployments = 2;
+   */
+  deployments?: DeploymentJson[];
 };
 
 /**
@@ -113,6 +122,11 @@ export type GetResponse = Message<"gandelm.workload.v1.GetResponse"> & {
    * @generated from field: gandelm.workload.v1.Workload workload = 1;
    */
   workload?: Workload;
+
+  /**
+   * @generated from field: repeated gandelm.workload.v1.Deployment deployments = 2;
+   */
+  deployments: Deployment[];
 };
 
 /**
@@ -123,6 +137,11 @@ export type GetResponseJson = {
    * @generated from field: gandelm.workload.v1.Workload workload = 1;
    */
   workload?: WorkloadJson;
+
+  /**
+   * @generated from field: repeated gandelm.workload.v1.Deployment deployments = 2;
+   */
+  deployments?: DeploymentJson[];
 };
 
 /**
@@ -227,51 +246,155 @@ export const ExternalLinkSchema: GenMessage<ExternalLink, ExternalLinkJson> = /*
   messageDesc(file_protocol_workload_v1_workload, 5);
 
 /**
- * @generated from message gandelm.workload.v1.ArtifactWithObject
+ * @generated from message gandelm.workload.v1.Deployment
  */
-export type ArtifactWithObject = Message<"gandelm.workload.v1.ArtifactWithObject"> & {
+export type Deployment = Message<"gandelm.workload.v1.Deployment"> & {
   /**
-   * @generated from field: gandelm.catalog.v1.Artifact artifact = 1;
+   * @generated from field: repeated gandelm.workload.v1.Container containers = 1;
    */
-  artifact?: Artifact;
+  containers: Container[];
 
   /**
-   * @generated from field: string version = 2;
+   * @generated from field: gandelm.workload.v1.ReplicaStatus replica_status = 2;
    */
-  version: string;
+  replicaStatus?: ReplicaStatus;
 
   /**
-   * @generated from field: string url = 3;
+   * @generated from field: string message = 3;
    */
-  url: string;
+  message: string;
 };
 
 /**
- * @generated from message gandelm.workload.v1.ArtifactWithObject
+ * @generated from message gandelm.workload.v1.Deployment
  */
-export type ArtifactWithObjectJson = {
+export type DeploymentJson = {
   /**
-   * @generated from field: gandelm.catalog.v1.Artifact artifact = 1;
+   * @generated from field: repeated gandelm.workload.v1.Container containers = 1;
    */
-  artifact?: ArtifactJson;
+  containers?: ContainerJson[];
 
   /**
-   * @generated from field: string version = 2;
+   * @generated from field: gandelm.workload.v1.ReplicaStatus replica_status = 2;
    */
-  version?: string;
+  replicaStatus?: ReplicaStatusJson;
 
   /**
-   * @generated from field: string url = 3;
+   * @generated from field: string message = 3;
    */
-  url?: string;
+  message?: string;
 };
 
 /**
- * Describes the message gandelm.workload.v1.ArtifactWithObject.
- * Use `create(ArtifactWithObjectSchema)` to create a new message.
+ * Describes the message gandelm.workload.v1.Deployment.
+ * Use `create(DeploymentSchema)` to create a new message.
  */
-export const ArtifactWithObjectSchema: GenMessage<ArtifactWithObject, ArtifactWithObjectJson> = /*@__PURE__*/
+export const DeploymentSchema: GenMessage<Deployment, DeploymentJson> = /*@__PURE__*/
   messageDesc(file_protocol_workload_v1_workload, 6);
+
+/**
+ * @generated from message gandelm.workload.v1.Container
+ */
+export type Container = Message<"gandelm.workload.v1.Container"> & {
+  /**
+   * @generated from field: string image = 1;
+   */
+  image: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: bool is_init = 3;
+   */
+  isInit: boolean;
+};
+
+/**
+ * @generated from message gandelm.workload.v1.Container
+ */
+export type ContainerJson = {
+  /**
+   * @generated from field: string image = 1;
+   */
+  image?: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name?: string;
+
+  /**
+   * @generated from field: bool is_init = 3;
+   */
+  isInit?: boolean;
+};
+
+/**
+ * Describes the message gandelm.workload.v1.Container.
+ * Use `create(ContainerSchema)` to create a new message.
+ */
+export const ContainerSchema: GenMessage<Container, ContainerJson> = /*@__PURE__*/
+  messageDesc(file_protocol_workload_v1_workload, 7);
+
+/**
+ * @generated from message gandelm.workload.v1.ReplicaStatus
+ */
+export type ReplicaStatus = Message<"gandelm.workload.v1.ReplicaStatus"> & {
+  /**
+   * @generated from field: uint32 desired = 1;
+   */
+  desired: number;
+
+  /**
+   * @generated from field: uint32 available = 2;
+   */
+  available: number;
+
+  /**
+   * @generated from field: uint32 ready = 3;
+   */
+  ready: number;
+
+  /**
+   * @generated from field: uint32 updated = 4;
+   */
+  updated: number;
+};
+
+/**
+ * @generated from message gandelm.workload.v1.ReplicaStatus
+ */
+export type ReplicaStatusJson = {
+  /**
+   * @generated from field: uint32 desired = 1;
+   */
+  desired?: number;
+
+  /**
+   * @generated from field: uint32 available = 2;
+   */
+  available?: number;
+
+  /**
+   * @generated from field: uint32 ready = 3;
+   */
+  ready?: number;
+
+  /**
+   * @generated from field: uint32 updated = 4;
+   */
+  updated?: number;
+};
+
+/**
+ * Describes the message gandelm.workload.v1.ReplicaStatus.
+ * Use `create(ReplicaStatusSchema)` to create a new message.
+ */
+export const ReplicaStatusSchema: GenMessage<ReplicaStatus, ReplicaStatusJson> = /*@__PURE__*/
+  messageDesc(file_protocol_workload_v1_workload, 8);
 
 /**
  * @generated from service gandelm.workload.v1.WorkloadService

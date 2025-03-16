@@ -72,6 +72,28 @@ export default async function Page({
           </Table >
         );
       })}
+      {workloads.deployments.map((d) => {
+        return (
+          <Table columns={['Key', 'Value']}>
+            <tr>
+              <td> レプリカ </td>
+              <td> {d.replicaStatus?.available} / {d.replicaStatus?.desired} - {d.replicaStatus?.ready} - {d.replicaStatus?.updated} </td>
+            </tr>
+            <tr>
+              <td> メッセージ </td>
+              <td> {d.message} </td>
+            </tr>
+            {d.containers.map((c) => {
+              return (
+                <tr>
+                  <td> {c.name} </td>
+                  <td> {c.image} </td>
+                </tr>
+              )
+            })}
+          </Table >
+        );
+      })}
     </div>
   )
 }
