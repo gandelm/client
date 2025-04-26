@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+import "protocol/catalog/v1/catalog.proto";
+
+package gandelm.workload.v1;
+
+service WorkloadService {
+  rpc List(ListRequest) returns (ListResponse);
+  rpc Get(GetRequest) returns (GetResponse);
+}
+
+message ListRequest { string catalog_id = 1; }
+message ListResponse {
+  repeated Workload workloads = 1;
+  repeated Deployment deployments = 2;
+}
+
+message GetRequest {
+  string catalog_id = 1;
+  string workload_id = 2;
+}
+
+message GetResponse {
+  Workload workload = 1;
+  repeated Deployment deployments = 2;
+}
+
+message Workload {
+  string workload_id = 1;
+  string endpoint = 2;
+  string entrypoint = 3;
+  repeated ExternalLink external_links = 4;
+}
+
+message ExternalLink {
+  string title = 1;
+  string url = 2;
+}
+
+message Deployment {
+  repeated Container containers = 1;
+  ReplicaStatus replica_status = 2;
+  string message = 3;
+}
+
+message Container {
+  string image = 1;
+  string name = 2;
+  bool is_init = 3;
+}
+
+message ReplicaStatus {
+  uint32 desired = 1;
+  uint32 available = 2;
+  uint32 ready = 3;
+  uint32 updated = 4;
+}

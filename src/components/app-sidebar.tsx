@@ -3,7 +3,6 @@
 import * as React from "react"
 import {
   AudioWaveform,
-  BookOpen,
   Bot,
   Command,
   Frame,
@@ -52,27 +51,27 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Kihon Settei",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "カタログ",
+          url: "/catalogs",
         },
         {
-          title: "Starred",
-          url: "#",
+          title: "バージョン",
+          url: "/versions",
         },
         {
-          title: "Settings",
-          url: "#",
+          title: "ラベル",
+          url: "/labels",
         },
       ],
     },
     {
-      title: "Models",
+      title: "Build Histories",
       url: "#",
       icon: Bot,
       items: [
@@ -91,30 +90,7 @@ const data = {
       ],
     },
     {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
+      title: "Project Settei",
       url: "#",
       icon: Settings2,
       items: [
