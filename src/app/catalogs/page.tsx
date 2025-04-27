@@ -2,14 +2,17 @@ import Table from '@/components/Table'
 import APIClient from '@/lib/api'
 import { ListResponse } from '@/generated/protocol/catalog/v1/catalog_pb'
 import { timestampDate } from '@bufbuild/protobuf/wkt'
+import { Button } from '@/components/ui/button'
 
 export default async function Page() {
   const response: ListResponse = await new APIClient().Catalog().List()
   return (
-    <div className="mx-auto max-w-6xl">
-      <div className="mt-8 flex items-end justify-between">
-        <h2 className="text-base/7 font-semibold text-zinc-950 sm:text-sm/6 dark:text-white">Catalogs</h2>
-        <div><a href="/catalogs/new" className="btn btn-primary">新規作成</a></div>
+    <div className="w-full mx-auto max-w-8/10">
+      <div className="my-8 flex items-end justify-between">
+        <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">カタログ一覧</h2>
+        <Button asChild>
+          <a href="/catalogs/new">新規作成</a>
+        </Button>
       </div>
 
       <Table columns={['Name', 'SERVER', 'MASTER', 'Created At', 'Updated At', 'Priority', 'Owner']}>

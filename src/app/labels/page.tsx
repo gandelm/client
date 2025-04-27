@@ -1,14 +1,17 @@
 import Table from '@/components/Table'
 import APIClient from '@/lib/api'
 import { ListResponse } from '@/generated/protocol/label/v1/label_pb'
+import { Button } from '@/components/ui/button'
 
 export default async function Page() {
   const response: ListResponse = await new APIClient().Label().List()
   return (
-    <>
+    <div className="w-full mx-auto max-w-8/10">
       <div className="mt-8 flex items-end justify-between">
-        <h2 className="text-base/7 font-semibold text-zinc-950 sm:text-sm/6 dark:text-white">Catalogs</h2>
-        <div><a href="/catalogs/new" className="btn btn-primary">新規作成</a></div>
+        <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">ラベル一覧</h2>
+        <Button asChild>
+          <a href="/labels/new">新規作成</a>
+        </Button>
       </div>
 
       <Table columns={['id', 'title', 'description']}>
@@ -31,6 +34,6 @@ export default async function Page() {
           </tr>
         ))}
       </Table>
-    </>
+    </div>
   )
 }
