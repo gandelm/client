@@ -3,6 +3,7 @@ import { createClient } from "@connectrpc/connect";
 import { CatalogService, CreateRequest } from "@/generated/protocol/catalog/v1/catalog_pb";
 import { WorkloadService } from "@/generated/protocol/workload/v1/workload_pb";
 import { LabelService, CreateRequest as LabelCreateRequest } from "@/generated/protocol/label/v1/label_pb";
+import { VersionService, CreateRequest as VersionCreateRequest } from "@/generated/protocol/version/v1/version_pb";
 
 export default class APIClient {
   private tp: any
@@ -24,6 +25,10 @@ export default class APIClient {
 
   Label(): Label {
     return new Label(this.tp);
+  }
+
+  Version(): Version {
+    return new Version(this.tp);
   }
 }
 
@@ -88,5 +93,29 @@ export class Label {
 
   async Delete(id: string) {
     return this.client.delete({ labelId: id });
+  }
+}
+
+export class Version {
+  private client
+
+  constructor(tp: any) {
+    this.client = createClient(VersionService, tp);
+  }
+
+  async Get(id: string) {
+    return this.client.get({ versionId: id });
+  }
+
+  async List() {
+    return this.client.list({});
+  }
+
+  async Create(request: VersionCreateRequest) {
+    return this.client.create(request);
+  }
+
+  async Delete(id: string) {
+    return this.client.delete({ versionId: id });
   }
 }

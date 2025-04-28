@@ -1,5 +1,6 @@
 import { createCatalog } from "@/app/catalogs/new/action/new";
 import { ListResponse } from "@/generated/protocol/label/v1/label_pb";
+import { ListResponse as VersionList } from "@/generated/protocol/version/v1/version_pb";
 import APIClient from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,6 +11,7 @@ import VersionNameInputGroup from "./components/version-name-input-group";
 
 export default async function Page() {
   const labels: ListResponse = await new APIClient().Label().List()
+  const versions: VersionList = await new APIClient().Version().List()
   return (
     <div className="w-full mx-auto max-w-8/10">
       <div className="my-8 flex items-end justify-between">

@@ -1,19 +1,27 @@
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ListResponse } from "@/generated/protocol/version/v1/version_pb";
+import APIClient from "@/lib/api";
 
-export default function VersionNameInputGroup() {
+export default async function VersionNameInputGroup() {
+  const response: ListResponse = await new APIClient().Version().List()
+  var selected: string = ""
+  for (const version of response.versions) {
+    selected = version.id
+    break
+  }
   return (
-    <Select name="version">
+    <Select name="version" value={selected}>
       <SelectTrigger className="w-full">
         <SelectValue placeholder="バージョンを選択" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
           <SelectLabel>バージョン</SelectLabel>
-          <SelectItem value="apple">Apple</SelectItem>
-          <SelectItem value="banana">Banana</SelectItem>
-          <SelectItem value="blueberry">Blueberry</SelectItem>
-          <SelectItem value="grapes">Grapes</SelectItem>
-          <SelectItem value="pineapple">Pineapple</SelectItem>
+          {response.versions.map((version) => (
+            <SelectItem key={version.id} value={version.id}>
+              {version.id}
+            </SelectItem>
+          ))}
         </SelectGroup>
       </SelectContent>
     </Select>
