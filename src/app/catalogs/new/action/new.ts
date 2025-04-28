@@ -12,6 +12,7 @@ export async function createCatalog(formData: FormData) {
   request.name = formData.get("name") as string
   request.description = formData.get("description") as string
   request.priority = parseInt(formData.get("priority") as string)
+  request.labels = formData.getAll("labels") as string[]
   await new APIClient().Catalog().Create(request)
   redirect("/catalogs")
 }

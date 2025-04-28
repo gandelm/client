@@ -1,8 +1,10 @@
+import { Button } from "@/components/ui/button";
 import { GetResponse } from "@/generated/protocol/catalog/v1/catalog_pb"
 import { ListResponse } from "@/generated/protocol/workload/v1/workload_pb"
 import APIClient from "@/lib/api"
 import { timestampDate } from "@bufbuild/protobuf/wkt"
 import { Fragment } from "react"
+import { DeleteCatalogButton } from "./actions/delete";
 
 export default async function Page({
   params,
@@ -63,8 +65,10 @@ export default async function Page({
             </span>
           </div>
           <div className="flex gap-4">
-            <button className="btn btn-primary">編集</button>
-            <button className="btn btn-secondary">削除</button>
+            <Button variant="default">編集</Button>
+            {catalog.catalog && (
+              <DeleteCatalogButton id={catalog.catalog.id} />
+            )}
           </div>
         </div>
       </div>

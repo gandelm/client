@@ -15,7 +15,7 @@ export default async function Page() {
         </Button>
       </div>
 
-      <Table columns={['Name', 'SERVER', 'MASTER', 'Created At', 'Updated At', 'Priority', 'Owner']}>
+      <Table columns={['Name', 'SERVER', 'MASTER', 'Created At', 'Updated At', 'Priority', 'Labels']}>
         {response.catalogs.map((catalog) => (
           <tr key={catalog.id} className="has-[[data-row-link][data-focus]]:outline-2 has-[[data-row-link][data-focus]]:-outline-offset-2 has-[[data-row-link][data-focus]]:outline-blue-500 dark:focus-within:bg-white/[2.5%] hover:bg-zinc-950/[2.5%] dark:hover:bg-white/[2.5%]">
             <td className="relative px-4 first:pl-(--gutter,--spacing(2)) last:pr-(--gutter,--spacing(2)) border-b border-zinc-950/5 dark:border-white/5 py-4 sm:first:pl-1 sm:last:pr-1">
@@ -45,7 +45,9 @@ export default async function Page() {
             </td>
             <td className="relative px-4 first:pl-(--gutter,--spacing(2)) last:pr-(--gutter,--spacing(2)) border-b border-zinc-950/5 dark:border-white/5 py-4 sm:first:pl-1 sm:last:pr-1">
               <a data-row-link="true" aria-label="Order #3000" className="absolute inset-0 focus:outline-hidden" href={`/catalogs/${catalog.id}`}></a>
-              <span>atsuya.siphon@example.com</span>
+              {catalog.labels.map((label) => (
+                <span key={label}>{label}</span>
+              ))}
             </td>
           </tr>
         ))}
