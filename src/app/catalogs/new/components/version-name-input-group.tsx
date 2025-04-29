@@ -1,23 +1,49 @@
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ListResponse } from "@/generated/protocol/version/v1/version_pb";
-import APIClient from "@/lib/api";
+"use client";
 
-export default async function VersionNameInputGroup() {
-  const response: ListResponse = await new APIClient().Version().List()
-  var selected: string = ""
-  for (const version of response.versions) {
-    selected = version.id
-    break
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { ListResponse } from "@/generated/protocol/version/v1/version_pb";
+import { useEffect, useState } from "react";
+import APIClient from "@/lib/api";
+import { Skeleton } from "@/components/ui/skeleton";
+
+export default function VersionNameInputGroup() {
+  const [versions, setVersions] = useState<ListResponse["versions"]>([]);
+  const [selected, setSelected] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const fetchVersions = async () => {
+      const response = await new APIClient().Version().List();
+      setVersions(response.versions);
+      if (response.versions.length > 0) {
+        // データ取得後に初期値を設定
+        setSelected(response.versions[0].id);
+      }
+    };
+    fetchVersions();
+  }, []);
+
+  if (versions.length === 0 || selected === undefined) {
+    return <Skeleton className="w-full" />
+
   }
+
   return (
-    <Select name="version" value={selected}>
+    <Select name="version" value={selected} onValueChange={setSelected}>
       <SelectTrigger className="w-full">
         <SelectValue placeholder="バージョンを選択" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
           <SelectLabel>バージョン</SelectLabel>
-          {response.versions.map((version) => (
+          {versions.map((version) => (
             <SelectItem key={version.id} value={version.id}>
               {version.id}
             </SelectItem>
@@ -25,6 +51,5 @@ export default async function VersionNameInputGroup() {
         </SelectGroup>
       </SelectContent>
     </Select>
-  )
+  );
 }
-

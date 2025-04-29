@@ -1,17 +1,13 @@
 import { createCatalog } from "@/app/catalogs/new/action/new";
-import { ListResponse } from "@/generated/protocol/label/v1/label_pb";
-import { ListResponse as VersionList } from "@/generated/protocol/version/v1/version_pb";
-import APIClient from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Badge } from "@/components/ui/badge";
 import Label from "@/components/form/label";
 import VersionNameInputGroup from "./components/version-name-input-group";
+import LabelsInputGroup from "./components/labels-input-group";
+import { Suspense } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default async function Page() {
-  const labels: ListResponse = await new APIClient().Label().List()
-  const versions: VersionList = await new APIClient().Version().List()
   return (
     <div className="w-full mx-auto max-w-8/10">
       <div className="my-8 flex items-end justify-between">
@@ -32,17 +28,17 @@ export default async function Page() {
         <hr role="presentation" className="my-10 mt-6 w-full border-t border-zinc-950/10 dark:border-white/10"></hr>
         <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
           <Label title="ラベル" desc="環境に付与するラベルを複数選択できます" />
-          <div>
-            {labels.labels.map((label) => (
-              <div key={label.id} className="flex space-x-2 mb-4">
-                <Checkbox name="labels" value={label.id} />
-                <div className="grid gap-1.5 leading-none">
-                  <Badge variant="default">{label.title}</Badge>
-                  <p className="text-sm text-muted-foreground">{label.description}</p>
-                </div>
+          <Suspense fallback={
+            <div className="flex items-center space-x-4">
+              <Skeleton className="h-12 w-12 rounded-full" />
+              <div className="space-y-2">
+                <Skeleton className="h-4 w-[250px]" />
+                <Skeleton className="h-4 w-[200px]" />
               </div>
-            ))}
-          </div>
+            </div>
+          }>
+            <LabelsInputGroup />
+          </Suspense>
         </section>
 
         <hr role="presentation" className="my-10 mt-6 w-full border-t border-zinc-950/10 dark:border-white/10"></hr>
