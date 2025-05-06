@@ -10,7 +10,7 @@ export default async function LabelsInputGroup() {
     <div>
       {labels.map((label) => (
         <div key={label.id} className="flex space-x-2 mb-4">
-          <Checkbox name="labels" value={label.id} />
+          <Checkbox name="labels[]" value={label.id} />
           <div className="grid gap-1.5 leading-none">
             <Badge variant="default">{label.title}</Badge>
             <p className="text-sm text-muted-foreground">{label.description}</p>

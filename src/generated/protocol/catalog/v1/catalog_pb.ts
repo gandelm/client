@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file protocol/catalog/v1/catalog.proto.
  */
 export const file_protocol_catalog_v1_catalog: GenFile = /*@__PURE__*/
-  fileDesc("CiFwcm90b2NvbC9jYXRhbG9nL3YxL2NhdGFsb2cucHJvdG8SEmdhbmRlbG0uY2F0YWxvZy52MSINCgtMaXN0UmVxdWVzdCI9CgxMaXN0UmVzcG9uc2USLQoIY2F0YWxvZ3MYASADKAsyGy5nYW5kZWxtLmNhdGFsb2cudjEuQ2F0YWxvZyIgCgpHZXRSZXF1ZXN0EhIKCmNhdGFsb2dfaWQYASABKAkiOwoLR2V0UmVzcG9uc2USLAoHY2F0YWxvZxgBIAEoCzIbLmdhbmRlbG0uY2F0YWxvZy52MS5DYXRhbG9nImUKDUNyZWF0ZVJlcXVlc3QSDwoHdmVyc2lvbhgBIAEoCRIMCgRuYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhAKCHByaW9yaXR5GAQgASgNEg4KBmxhYmVscxgFIAMoCSI+Cg5DcmVhdGVSZXNwb25zZRIsCgdjYXRhbG9nGAEgASgLMhsuZ2FuZGVsbS5jYXRhbG9nLnYxLkNhdGFsb2ciPQoNVXBkYXRlUmVxdWVzdBIsCgdjYXRhbG9nGAEgASgLMhsuZ2FuZGVsbS5jYXRhbG9nLnYxLkNhdGFsb2ciPgoOVXBkYXRlUmVzcG9uc2USLAoHY2F0YWxvZxgBIAEoCzIbLmdhbmRlbG0uY2F0YWxvZy52MS5DYXRhbG9nIiMKDURlbGV0ZVJlcXVlc3QSEgoKY2F0YWxvZ19pZBgBIAEoCSIQCg5EZWxldGVSZXNwb25zZSLgAQoHQ2F0YWxvZxIKCgJpZBgBIAEoCRITCgt3b3JrbG9hZF9pZBgCIAEoCRIMCgRuYW1lGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQgASgJEg8KB3ZlcnNpb24YBSABKAkSEAoIcHJpb3JpdHkYBiABKA0SDgoGbGFiZWxzGAcgAygJEi4KCmNyZWF0ZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnVwZGF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMpYDCg5DYXRhbG9nU2VydmljZRJJCgRMaXN0Eh8uZ2FuZGVsbS5jYXRhbG9nLnYxLkxpc3RSZXF1ZXN0GiAuZ2FuZGVsbS5jYXRhbG9nLnYxLkxpc3RSZXNwb25zZRJGCgNHZXQSHi5nYW5kZWxtLmNhdGFsb2cudjEuR2V0UmVxdWVzdBofLmdhbmRlbG0uY2F0YWxvZy52MS5HZXRSZXNwb25zZRJPCgZDcmVhdGUSIS5nYW5kZWxtLmNhdGFsb2cudjEuQ3JlYXRlUmVxdWVzdBoiLmdhbmRlbG0uY2F0YWxvZy52MS5DcmVhdGVSZXNwb25zZRJPCgZVcGRhdGUSIS5nYW5kZWxtLmNhdGFsb2cudjEuVXBkYXRlUmVxdWVzdBoiLmdhbmRlbG0uY2F0YWxvZy52MS5VcGRhdGVSZXNwb25zZRJPCgZEZWxldGUSIS5nYW5kZWxtLmNhdGFsb2cudjEuRGVsZXRlUmVxdWVzdBoiLmdhbmRlbG0uY2F0YWxvZy52MS5EZWxldGVSZXNwb25zZWIGcHJvdG8z", [file_google_protobuf_timestamp]);
+  fileDesc("CiFwcm90b2NvbC9jYXRhbG9nL3YxL2NhdGFsb2cucHJvdG8SEmdhbmRlbG0uY2F0YWxvZy52MSINCgtMaXN0UmVxdWVzdCI9CgxMaXN0UmVzcG9uc2USLQoIY2F0YWxvZ3MYASADKAsyGy5nYW5kZWxtLmNhdGFsb2cudjEuQ2F0YWxvZyIgCgpHZXRSZXF1ZXN0EhIKCmNhdGFsb2dfaWQYASABKAkiOwoLR2V0UmVzcG9uc2USLAoHY2F0YWxvZxgBIAEoCzIbLmdhbmRlbG0uY2F0YWxvZy52MS5DYXRhbG9nIssBCg1DcmVhdGVSZXF1ZXN0Eg8KB3ZlcnNpb24YASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIQCghwcmlvcml0eRgEIAEoDRIOCgZsYWJlbHMYBSADKAkSPQoJYXJ0aWZhY3RzGAYgAygLMiouZ2FuZGVsbS5jYXRhbG9nLnYxLkNyZWF0ZVJlcXVlc3QuQXJ0aWZhY3QaJQoIQXJ0aWZhY3QSCgoCaWQYASABKAkSDQoFdmFsdWUYAiABKAkiPgoOQ3JlYXRlUmVzcG9uc2USLAoHY2F0YWxvZxgBIAEoCzIbLmdhbmRlbG0uY2F0YWxvZy52MS5DYXRhbG9nIj0KDVVwZGF0ZVJlcXVlc3QSLAoHY2F0YWxvZxgBIAEoCzIbLmdhbmRlbG0uY2F0YWxvZy52MS5DYXRhbG9nIj4KDlVwZGF0ZVJlc3BvbnNlEiwKB2NhdGFsb2cYASABKAsyGy5nYW5kZWxtLmNhdGFsb2cudjEuQ2F0YWxvZyIjCg1EZWxldGVSZXF1ZXN0EhIKCmNhdGFsb2dfaWQYASABKAkiEAoORGVsZXRlUmVzcG9uc2Ui4AEKB0NhdGFsb2cSCgoCaWQYASABKAkSEwoLd29ya2xvYWRfaWQYAiABKAkSDAoEbmFtZRgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRIPCgd2ZXJzaW9uGAUgASgJEhAKCHByaW9yaXR5GAYgASgNEg4KBmxhYmVscxgHIAMoCRIuCgpjcmVhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgp1cGRhdGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcDKWAwoOQ2F0YWxvZ1NlcnZpY2USSQoETGlzdBIfLmdhbmRlbG0uY2F0YWxvZy52MS5MaXN0UmVxdWVzdBogLmdhbmRlbG0uY2F0YWxvZy52MS5MaXN0UmVzcG9uc2USRgoDR2V0Eh4uZ2FuZGVsbS5jYXRhbG9nLnYxLkdldFJlcXVlc3QaHy5nYW5kZWxtLmNhdGFsb2cudjEuR2V0UmVzcG9uc2USTwoGQ3JlYXRlEiEuZ2FuZGVsbS5jYXRhbG9nLnYxLkNyZWF0ZVJlcXVlc3QaIi5nYW5kZWxtLmNhdGFsb2cudjEuQ3JlYXRlUmVzcG9uc2USTwoGVXBkYXRlEiEuZ2FuZGVsbS5jYXRhbG9nLnYxLlVwZGF0ZVJlcXVlc3QaIi5nYW5kZWxtLmNhdGFsb2cudjEuVXBkYXRlUmVzcG9uc2USTwoGRGVsZXRlEiEuZ2FuZGVsbS5jYXRhbG9nLnYxLkRlbGV0ZVJlcXVlc3QaIi5nYW5kZWxtLmNhdGFsb2cudjEuRGVsZXRlUmVzcG9uc2ViBnByb3RvMw", [file_google_protobuf_timestamp]);
 
 /**
  * @generated from message gandelm.catalog.v1.ListRequest
@@ -142,6 +142,11 @@ export type CreateRequest = Message<"gandelm.catalog.v1.CreateRequest"> & {
    * @generated from field: repeated string labels = 5;
    */
   labels: string[];
+
+  /**
+   * @generated from field: repeated gandelm.catalog.v1.CreateRequest.Artifact artifacts = 6;
+   */
+  artifacts: CreateRequest_Artifact[];
 };
 
 /**
@@ -172,6 +177,11 @@ export type CreateRequestJson = {
    * @generated from field: repeated string labels = 5;
    */
   labels?: string[];
+
+  /**
+   * @generated from field: repeated gandelm.catalog.v1.CreateRequest.Artifact artifacts = 6;
+   */
+  artifacts?: CreateRequest_ArtifactJson[];
 };
 
 /**
@@ -180,6 +190,43 @@ export type CreateRequestJson = {
  */
 export const CreateRequestSchema: GenMessage<CreateRequest, CreateRequestJson> = /*@__PURE__*/
   messageDesc(file_protocol_catalog_v1_catalog, 4);
+
+/**
+ * @generated from message gandelm.catalog.v1.CreateRequest.Artifact
+ */
+export type CreateRequest_Artifact = Message<"gandelm.catalog.v1.CreateRequest.Artifact"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string value = 2;
+   */
+  value: string;
+};
+
+/**
+ * @generated from message gandelm.catalog.v1.CreateRequest.Artifact
+ */
+export type CreateRequest_ArtifactJson = {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id?: string;
+
+  /**
+   * @generated from field: string value = 2;
+   */
+  value?: string;
+};
+
+/**
+ * Describes the message gandelm.catalog.v1.CreateRequest.Artifact.
+ * Use `create(CreateRequest_ArtifactSchema)` to create a new message.
+ */
+export const CreateRequest_ArtifactSchema: GenMessage<CreateRequest_Artifact, CreateRequest_ArtifactJson> = /*@__PURE__*/
+  messageDesc(file_protocol_catalog_v1_catalog, 4, 0);
 
 /**
  * @generated from message gandelm.catalog.v1.CreateResponse

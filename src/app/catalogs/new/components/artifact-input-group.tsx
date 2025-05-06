@@ -28,10 +28,11 @@ export default function ArtifactInputGroup() {
 
   return (
     <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-      {artifacts.map((artifact) => (
+      {artifacts.map((artifact, index) => (
         <Fragment key={artifact.id}>
           <Label title={artifact.title} desc={artifact.description} />
-          <Input type="text" name={artifact.id} placeholder="main" className="input w-full" />
+          <Input type="hidden" name={`artifacts[${index}].id`} value={artifact.id} className="input w-full" />
+          <Input type="text" name={`artifacts[${index}].value`} placeholder="main" className="input w-full" />
         </Fragment>
       ))}
     </section>
