@@ -6,6 +6,7 @@ import VersionNameInputGroup from "./components/version-name-input-group";
 import LabelsInputGroup from "./components/labels-input-group";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
+import ArtifactInputGroup from "./components/artifact-input-group";
 
 export default async function Page() {
   return (
@@ -16,6 +17,7 @@ export default async function Page() {
 
       <form className="form" action={createCatalog}>
         <hr role="presentation" className="my-10 mt-6 w-full border-t border-zinc-950/10 dark:border-white/10"></hr>
+        <h3 className="mb-6">基本情報</h3>
         <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
           <Label title="バージョン" desc="カタログのベースとなるバージョンを入力してください" />
           <VersionNameInputGroup />
@@ -26,6 +28,11 @@ export default async function Page() {
         </section>
 
         <hr role="presentation" className="my-10 mt-6 w-full border-t border-zinc-950/10 dark:border-white/10"></hr>
+        <h3 className="mb-6">アーティファクト設定</h3>
+        <ArtifactInputGroup />
+
+        <hr role="presentation" className="my-10 mt-6 w-full border-t border-zinc-950/10 dark:border-white/10"></hr>
+        <h3 className="mb-6">その他</h3>
         <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
           <Label title="ラベル" desc="環境に付与するラベルを複数選択できます" />
           <Suspense fallback={
@@ -41,7 +48,6 @@ export default async function Page() {
           </Suspense>
         </section>
 
-        <hr role="presentation" className="my-10 mt-6 w-full border-t border-zinc-950/10 dark:border-white/10"></hr>
         <section className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
           <Label title="表示優先度" desc="カタログ一覧における表示優先度を入力してください" />
           <Input type="number" placeholder="0" defaultValue="0" name="priority" />

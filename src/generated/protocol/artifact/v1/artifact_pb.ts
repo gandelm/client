@@ -2,17 +2,19 @@
 // @generated from file protocol/artifact/v1/artifact.proto (package gandelm.artifact.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
-import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
+import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
+import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
 import type { Timestamp, TimestampJson } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { ArtifactType, ArtifactTypeJson } from "../../constant/v1/constant_pb.ts";
+import { file_protocol_constant_v1_constant } from "../../constant/v1/constant_pb.ts";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file protocol/artifact/v1/artifact.proto.
  */
 export const file_protocol_artifact_v1_artifact: GenFile = /*@__PURE__*/
-  fileDesc("CiNwcm90b2NvbC9hcnRpZmFjdC92MS9hcnRpZmFjdC5wcm90bxITZ2FuZGVsbS5hcnRpZmFjdC52MSINCgtMaXN0UmVxdWVzdCJACgxMaXN0UmVzcG9uc2USMAoJYXJ0aWZhY3RzGAEgAygLMh0uZ2FuZGVsbS5hcnRpZmFjdC52MS5BcnRpZmFjdCIhCgpHZXRSZXF1ZXN0EhMKC2FydGlmYWN0X2lkGAEgASgJIj4KC0dldFJlc3BvbnNlEi8KCGFydGlmYWN0GAEgASgLMh0uZ2FuZGVsbS5hcnRpZmFjdC52MS5BcnRpZmFjdCKHAQoNQ3JlYXRlUmVxdWVzdBIPCgd2ZXJzaW9uGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSEAoIcHJpb3JpdHkYBCABKA0SMAoJYXJ0aWZhY3RzGAUgAygLMh0uZ2FuZGVsbS5hcnRpZmFjdC52MS5BcnRpZmFjdCJBCg5DcmVhdGVSZXNwb25zZRIvCghhcnRpZmFjdBgBIAEoCzIdLmdhbmRlbG0uYXJ0aWZhY3QudjEuQXJ0aWZhY3QiQAoNVXBkYXRlUmVxdWVzdBIvCghhcnRpZmFjdBgBIAEoCzIdLmdhbmRlbG0uYXJ0aWZhY3QudjEuQXJ0aWZhY3QiQQoOVXBkYXRlUmVzcG9uc2USLwoIYXJ0aWZhY3QYASABKAsyHS5nYW5kZWxtLmFydGlmYWN0LnYxLkFydGlmYWN0IiQKDURlbGV0ZVJlcXVlc3QSEwoLYXJ0aWZhY3RfaWQYASABKAkiEAoORGVsZXRlUmVzcG9uc2UiywEKCEFydGlmYWN0EgoKAmlkGAEgASgJEg0KBXRpdGxlGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEi8KBHR5cGUYBCABKA4yIS5nYW5kZWxtLmFydGlmYWN0LnYxLkFydGlmYWN0VHlwZRIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgp1cGRhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCpjCgxBcnRpZmFjdFR5cGUSHQoZQVJUSUZBQ1RfVFlQRV9VTlNQRUNJRklFRBAAEhsKF0FSVElGQUNUX1RZUEVfQ09OVEFJTkVSEAESFwoTQVJUSUZBQ1RfVFlQRV9BU1NFVBACMqEDCg9BcnRpZmFjdFNlcnZpY2USSwoETGlzdBIgLmdhbmRlbG0uYXJ0aWZhY3QudjEuTGlzdFJlcXVlc3QaIS5nYW5kZWxtLmFydGlmYWN0LnYxLkxpc3RSZXNwb25zZRJICgNHZXQSHy5nYW5kZWxtLmFydGlmYWN0LnYxLkdldFJlcXVlc3QaIC5nYW5kZWxtLmFydGlmYWN0LnYxLkdldFJlc3BvbnNlElEKBkNyZWF0ZRIiLmdhbmRlbG0uYXJ0aWZhY3QudjEuQ3JlYXRlUmVxdWVzdBojLmdhbmRlbG0uYXJ0aWZhY3QudjEuQ3JlYXRlUmVzcG9uc2USUQoGVXBkYXRlEiIuZ2FuZGVsbS5hcnRpZmFjdC52MS5VcGRhdGVSZXF1ZXN0GiMuZ2FuZGVsbS5hcnRpZmFjdC52MS5VcGRhdGVSZXNwb25zZRJRCgZEZWxldGUSIi5nYW5kZWxtLmFydGlmYWN0LnYxLkRlbGV0ZVJlcXVlc3QaIy5nYW5kZWxtLmFydGlmYWN0LnYxLkRlbGV0ZVJlc3BvbnNlYgZwcm90bzM", [file_google_protobuf_timestamp]);
+  fileDesc("CiNwcm90b2NvbC9hcnRpZmFjdC92MS9hcnRpZmFjdC5wcm90bxITZ2FuZGVsbS5hcnRpZmFjdC52MSINCgtMaXN0UmVxdWVzdCJACgxMaXN0UmVzcG9uc2USMAoJYXJ0aWZhY3RzGAEgAygLMh0uZ2FuZGVsbS5hcnRpZmFjdC52MS5BcnRpZmFjdCIhCgpHZXRSZXF1ZXN0EhMKC2FydGlmYWN0X2lkGAEgASgJIj4KC0dldFJlc3BvbnNlEi8KCGFydGlmYWN0GAEgASgLMh0uZ2FuZGVsbS5hcnRpZmFjdC52MS5BcnRpZmFjdCJwCg1DcmVhdGVSZXF1ZXN0EgoKAmlkGAEgASgJEg0KBXRpdGxlGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEi8KBHR5cGUYBCABKA4yIS5nYW5kZWxtLmNvbnN0YW50LnYxLkFydGlmYWN0VHlwZSJBCg5DcmVhdGVSZXNwb25zZRIvCghhcnRpZmFjdBgBIAEoCzIdLmdhbmRlbG0uYXJ0aWZhY3QudjEuQXJ0aWZhY3QiQAoNVXBkYXRlUmVxdWVzdBIvCghhcnRpZmFjdBgBIAEoCzIdLmdhbmRlbG0uYXJ0aWZhY3QudjEuQXJ0aWZhY3QiQQoOVXBkYXRlUmVzcG9uc2USLwoIYXJ0aWZhY3QYASABKAsyHS5nYW5kZWxtLmFydGlmYWN0LnYxLkFydGlmYWN0IiQKDURlbGV0ZVJlcXVlc3QSEwoLYXJ0aWZhY3RfaWQYASABKAkiEAoORGVsZXRlUmVzcG9uc2UiywEKCEFydGlmYWN0EgoKAmlkGAEgASgJEg0KBXRpdGxlGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEi8KBHR5cGUYBCABKA4yIS5nYW5kZWxtLmNvbnN0YW50LnYxLkFydGlmYWN0VHlwZRIuCgpjcmVhdGVkX2F0GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgp1cGRhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcDKhAwoPQXJ0aWZhY3RTZXJ2aWNlEksKBExpc3QSIC5nYW5kZWxtLmFydGlmYWN0LnYxLkxpc3RSZXF1ZXN0GiEuZ2FuZGVsbS5hcnRpZmFjdC52MS5MaXN0UmVzcG9uc2USSAoDR2V0Eh8uZ2FuZGVsbS5hcnRpZmFjdC52MS5HZXRSZXF1ZXN0GiAuZ2FuZGVsbS5hcnRpZmFjdC52MS5HZXRSZXNwb25zZRJRCgZDcmVhdGUSIi5nYW5kZWxtLmFydGlmYWN0LnYxLkNyZWF0ZVJlcXVlc3QaIy5nYW5kZWxtLmFydGlmYWN0LnYxLkNyZWF0ZVJlc3BvbnNlElEKBlVwZGF0ZRIiLmdhbmRlbG0uYXJ0aWZhY3QudjEuVXBkYXRlUmVxdWVzdBojLmdhbmRlbG0uYXJ0aWZhY3QudjEuVXBkYXRlUmVzcG9uc2USUQoGRGVsZXRlEiIuZ2FuZGVsbS5hcnRpZmFjdC52MS5EZWxldGVSZXF1ZXN0GiMuZ2FuZGVsbS5hcnRpZmFjdC52MS5EZWxldGVSZXNwb25zZWIGcHJvdG8z", [file_google_protobuf_timestamp, file_protocol_constant_v1_constant]);
 
 /**
  * @generated from message gandelm.artifact.v1.ListRequest
@@ -119,14 +121,14 @@ export const GetResponseSchema: GenMessage<GetResponse, GetResponseJson> = /*@__
  */
 export type CreateRequest = Message<"gandelm.artifact.v1.CreateRequest"> & {
   /**
-   * @generated from field: string version = 1;
+   * @generated from field: string id = 1;
    */
-  version: string;
+  id: string;
 
   /**
-   * @generated from field: string name = 2;
+   * @generated from field: string title = 2;
    */
-  name: string;
+  title: string;
 
   /**
    * @generated from field: string description = 3;
@@ -134,14 +136,9 @@ export type CreateRequest = Message<"gandelm.artifact.v1.CreateRequest"> & {
   description: string;
 
   /**
-   * @generated from field: uint32 priority = 4;
+   * @generated from field: gandelm.constant.v1.ArtifactType type = 4;
    */
-  priority: number;
-
-  /**
-   * @generated from field: repeated gandelm.artifact.v1.Artifact artifacts = 5;
-   */
-  artifacts: Artifact[];
+  type: ArtifactType;
 };
 
 /**
@@ -149,14 +146,14 @@ export type CreateRequest = Message<"gandelm.artifact.v1.CreateRequest"> & {
  */
 export type CreateRequestJson = {
   /**
-   * @generated from field: string version = 1;
+   * @generated from field: string id = 1;
    */
-  version?: string;
+  id?: string;
 
   /**
-   * @generated from field: string name = 2;
+   * @generated from field: string title = 2;
    */
-  name?: string;
+  title?: string;
 
   /**
    * @generated from field: string description = 3;
@@ -164,14 +161,9 @@ export type CreateRequestJson = {
   description?: string;
 
   /**
-   * @generated from field: uint32 priority = 4;
+   * @generated from field: gandelm.constant.v1.ArtifactType type = 4;
    */
-  priority?: number;
-
-  /**
-   * @generated from field: repeated gandelm.artifact.v1.Artifact artifacts = 5;
-   */
-  artifacts?: ArtifactJson[];
+  type?: ArtifactTypeJson;
 };
 
 /**
@@ -328,7 +320,7 @@ export type Artifact = Message<"gandelm.artifact.v1.Artifact"> & {
   description: string;
 
   /**
-   * @generated from field: gandelm.artifact.v1.ArtifactType type = 4;
+   * @generated from field: gandelm.constant.v1.ArtifactType type = 4;
    */
   type: ArtifactType;
 
@@ -363,7 +355,7 @@ export type ArtifactJson = {
   description?: string;
 
   /**
-   * @generated from field: gandelm.artifact.v1.ArtifactType type = 4;
+   * @generated from field: gandelm.constant.v1.ArtifactType type = 4;
    */
   type?: ArtifactTypeJson;
 
@@ -384,43 +376,6 @@ export type ArtifactJson = {
  */
 export const ArtifactSchema: GenMessage<Artifact, ArtifactJson> = /*@__PURE__*/
   messageDesc(file_protocol_artifact_v1_artifact, 10);
-
-/**
- * @generated from enum gandelm.artifact.v1.ArtifactType
- */
-export enum ArtifactType {
-  /**
-   * UNKNOWN is the default value and should not be used.
-   *
-   * @generated from enum value: ARTIFACT_TYPE_UNSPECIFIED = 0;
-   */
-  UNSPECIFIED = 0,
-
-  /**
-   * CONTAINER_IMAGE represents a container image artifact.
-   *
-   * @generated from enum value: ARTIFACT_TYPE_CONTAINER = 1;
-   */
-  CONTAINER = 1,
-
-  /**
-   * ASSET represents a generic asset artifact.
-   *
-   * @generated from enum value: ARTIFACT_TYPE_ASSET = 2;
-   */
-  ASSET = 2,
-}
-
-/**
- * @generated from enum gandelm.artifact.v1.ArtifactType
- */
-export type ArtifactTypeJson = "ARTIFACT_TYPE_UNSPECIFIED" | "ARTIFACT_TYPE_CONTAINER" | "ARTIFACT_TYPE_ASSET";
-
-/**
- * Describes the enum gandelm.artifact.v1.ArtifactType.
- */
-export const ArtifactTypeSchema: GenEnum<ArtifactType, ArtifactTypeJson> = /*@__PURE__*/
-  enumDesc(file_protocol_artifact_v1_artifact, 0);
 
 /**
  * @generated from service gandelm.artifact.v1.ArtifactService

@@ -4,6 +4,7 @@ import { CatalogService, CreateRequest } from "@/generated/protocol/catalog/v1/c
 import { WorkloadService } from "@/generated/protocol/workload/v1/workload_pb";
 import { LabelService, CreateRequest as LabelCreateRequest } from "@/generated/protocol/label/v1/label_pb";
 import { VersionService, CreateRequest as VersionCreateRequest } from "@/generated/protocol/version/v1/version_pb";
+import { ArtifactService } from "@/generated/protocol/artifact/v1/artifact_pb";
 
 export default class APIClient {
   private tp: any
@@ -29,6 +30,22 @@ export default class APIClient {
 
   Version(): Version {
     return new Version(this.tp);
+  }
+
+  Artifact(): Artifact {
+    return new Artifact(this.tp);
+  }
+}
+
+export class Artifact {
+  private client
+
+  constructor(tp: any) {
+    this.client = createClient(ArtifactService, tp);
+  }
+
+  async List() {
+    return this.client.list({});
   }
 }
 
